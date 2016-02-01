@@ -1,4 +1,4 @@
-# node-grouping-test
+# point-grouping-test
 A coding challenge for a Platform Engineer.
 
 This repo contains the instructions and template to complete a coding challenge in Python. It is aimed at Python programmers of mid-level experience and up, and is designed to test the programmer's skill in designing and implementing algorithms. 
