@@ -102,4 +102,4 @@ if __name__ == "__main__":
     from utils import nodes
     pprint(group_nodes(nodes, 6))
     pprint(group_nodes2(nodes, 6))
-    pprint(group_nodes3(nodes, 6))
+    pprint(group_nodes3(nodes, 3))
