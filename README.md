@@ -22,7 +22,7 @@ Given that the data set represents geographic data, you should try to group poin
 
 The file `utils.py` is a Python module that contains a function, `driving_time_and_distance`. This function is pulled from our van routing logic. Given four values representing an origin and destination lat/lon, it will return two values: the driving time and distance between those two points. Write a script that works like above, but uses this function as the function to determine distance between the two points.
 
-### Stretch goal #2: 
+### Stretch goal #2: distribution
 
 When grouping addresses to produce our daily routes, it's important that each van has roughly the same number of stops to make in a day. Do the same as above, with one final optimization - optimize for both geographical proximity, using the function in the first stretch goal, *and* for equal group size for each van.
 
