@@ -5,8 +5,19 @@ This repo contains the instructions and template to complete a coding challenge 
 
 No external libraries are required—however, due to the algorithmic/numerical nature of the code at hand, Python libraries that provide robust implementations of various mathematical or statistical algorithms might be useful. The programmer should feel free to calibrate their approach to their own experience level. 
 
-This repo contains two Python modules, `test.py` and `utils.py`. `utils.py` contains 1 helper function and 1 sample data structure to be used in completing the exercise. The programmer should work in `test.py`. It's a working Python module, that contains instructions as well as a few function definitions to be filled in. When the module is run from the command line (using `python test.py`), the `__main__` block will be executed, printing the output of the functions on the sample data.
+# Instructions
 
-While the output of the module will of course be inspected for correctness and adherence to the specs, the code itself will be reviewed for correctness and flexibility. The programmer is strongly encouraged to use the output of the command line as a smoke test that their code is constructed correctly, but *not* as the sole criterion for a working and effective implementation of the requirements. The programmer should feel free to include additional tests in whatever testing framework they're comfortable with, if desired.
+## The goal
+One of the most enduring technical challenges at MakeSpace involves generating the routes that our vans and trucks run every day. A good routing algorithm has to take a group of points on a map and group them according to how many vans we want to run that day.
 
-The programmer is welcome to solve this challenge in either Python 2 or 3.
+`points.json` is a JSON data file that contains a list of objects representing geographic points, with a `lat`, `lon` and `id`. Your job is to write a Python script that will take an integer argument *n*, then read the file and output the `id`s of all the points, grouped into *n* groups, into a second file, `groups.json`.
+
+Given that the data set represents geographic data, you should try to group points by proximity, so that the geographically closest points are grouped together. 
+
+## Stretch goal #1
+
+The file `utils.py` is a Python module that contains a function, `driving_time_and_distance`. This function is pulled from our van routing logic. Given four values representing an origin and destination lat/lon, it will return two values: the driving time and distance between those two points. Write a script that works like above, but uses this function as the function to determine distance between the two points.
+
+## Stretch goal #2
+
+When grouping addresses to produce our daily routes, it's important that each van has roughly the same number of stops to make in a day. Do the same as above, with one final optimization - optimize for both geographical proximity, using the function in the first stretch goal, *and* for equal group size for each van.
