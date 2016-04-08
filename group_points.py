@@ -9,5 +9,5 @@ with open(input_file) as data_file:
 geo_clusters = Cluster(clusters, points, iterations)
 val = geo_clusters.k_means()
 
-with open('results.json', 'w') as outfile:
+with open('results2.json', 'w') as outfile:
     json.dump(val, outfile, sort_keys=True, indent=4, separators=(',', ': '))

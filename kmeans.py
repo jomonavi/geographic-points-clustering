@@ -30,6 +30,7 @@ class Cluster(object):
         Runs the k means algorithm
         """
         centroids = random.sample(self.points, self.k)
+        list_of_ids = []
 
         clusters = self.fill_clusters(centroids, {})
 
@@ -41,7 +42,13 @@ class Cluster(object):
             else:
                 clusters = self.fill_clusters(new_centroids, {})
 
-        return clusters
+        for key in clusters:
+            c = []
+            for p in clusters[key]:
+                c.append(p['id'])
+            list_of_ids.append(c)
+
+        return list_of_ids
 
     def find_nearest_centroid(self, p, centroids):
         """
