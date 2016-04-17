@@ -32,7 +32,7 @@ class Cluster(object):
         centroids = random.sample(self.points, self.k)
         list_of_ids = []
 
-        clusters = self.fill_clusters(centroids, {})
+        clusters = self.fill_clusters(centroids)
 
         for i in range(self.iterations):
             new_centroids = self.reset_centroids(clusters)
@@ -40,7 +40,7 @@ class Cluster(object):
                 print("this happened!")
                 return clusters
             else:
-                clusters = self.fill_clusters(new_centroids, {})
+                clusters = self.fill_clusters(new_centroids)
 
         for key in clusters:
             c = []
@@ -63,10 +63,11 @@ class Cluster(object):
         distances.sort(key=lambda tup: tup[1])
         return distances[0]
 
-    def fill_clusters(self, centroids, clusters):
+    def fill_clusters(self, centroids):
         """
         Assigns points to clusters based on its closest center point
         """
+        clusters = {}
         for i, p in enumerate(self.points):
             center = self.find_nearest_centroid(p, centroids)
             center_i = center[0]
