@@ -2,8 +2,6 @@
 
 A coding challenge for a Platform Engineer.
 
-One of the most enduring technical challenges at MakeSpace involves generating the routes that our vans and trucks run every day. A good routing algorithm has to take a group of points on a map and group them according to how many vans we want to run that day. Your job will be to implement this step.
-
 ## Instructions
 
 **Your solution should be presented as a standalone script we can run from command line using different input data files, and obtain corresponding output data files.**
